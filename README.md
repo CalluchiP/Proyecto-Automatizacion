@@ -127,3 +127,30 @@ python main.py
 - **Resolución de Conflictos**: El Orquestador consolida los cambios y resuelve conflictos basándose en una jerarquía explícita: `Orchestrator > Technical > Inventory > Sales > Customer Service > Notifications`.
 - **Aislamiento de Tests**: Cada prueba automatizada ejecuta `reset_inventory()` en su fase de `setUp`, garantizando que la base de datos simulada en `data/inventario.json` se restaure a sus valores iniciales, eliminando la polución de estados que agotaría los repuestos en ejecuciones concurrentes.
 - **Heurísticas Avanzadas de Idioma**: Soporta completamente caracteres con acento español (`á`, `é`, `í`, `ó`, `ú`, `ñ`) y realiza limpieza de conectores/conjunción final (`y`, `o`, `de`) para evitar la extracción de nombres de cliente incompletos o incorrectos.
+
+---
+
+## 7. Interfaz Gráfica (Dashboard Interactivo en Tiempo Real)
+
+El sistema incluye una **interfaz gráfica web premium** tipo Dashboard diseñada para visualizar en tiempo real el funcionamiento del Swarm de agentes inteligentes.
+
+### Características del Dashboard:
+- **Estética Glassmorphic Oscura**: Diseño ultra moderno con colores HSL vibrantes, bordes translúcidos con desenfoque de fondo (`backdrop-filter`) y efectos de brillo neón que responden al estado activo del sistema.
+- **Grafo de Agentes Animado**: Los nodos de los agentes (`Orquestador`, `Atención`, `Técnico`, `Almacén`, `Ventas` y `Avisos`) se iluminan dinámicamente y las líneas de conexión SVG muestran el flujo real del proceso con rayos de energía.
+- **Monitor de Notificación Simulada (iPhone/Android)**: Un celular virtual muestra los mensajes y notificaciones del cliente según su canal preferido (WhatsApp, SMS, Email).
+- **Consola de MCP Events JSON**: Una terminal interactiva con resaltado de sintaxis que imprime los esquemas de comunicación validados del Event Bus en milisegundos.
+- **Slot-Filling Interactivo en Vivo**: Permite probar consultas ambiguas (como el **Caso 5**). El sistema detectará los datos faltantes, mostrará un formulario interactivo y permitirá que el usuario responda conservando la memoria de la sesión activa en el backend.
+- **Telemetría e Inventario**: Indicadores interactivos de consumo de tokens, latencia, tasa de éxito y cuadrícula del stock de repuestos en tiempo real (`data/inventario.json`).
+
+### Pasos para Iniciar el Servidor del Dashboard:
+
+1. Ejecuta el servidor HTTP nativo sin dependencias externas:
+   ```bash
+   python server.py
+   ```
+2. Abre la URL en tu navegador preferido:
+   ```
+   http://localhost:8000
+   ```
+3. Disfruta interactuando con los 5 casos preconfigurados o enviando consultas técnicas personalizadas en la caja de texto.
+
