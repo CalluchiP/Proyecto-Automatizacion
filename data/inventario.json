@@ -1,0 +1,47 @@
+{
+  "Pantalla HP Laptop": {
+    "codigo": "PART-HP-SCR-01",
+    "stock": 4,
+    "precio": 120.0
+  },
+  "Memoria RAM DDR4 8GB": {
+    "codigo": "PART-RAM-DDR4-8G",
+    "stock": 0,
+    "precio": 45.0
+  },
+  "Memoria RAM DDR4 16GB": {
+    "codigo": "PART-RAM-DDR4-16G",
+    "stock": 4,
+    "precio": 80.0
+  },
+  "Fuente de Poder 600W": {
+    "codigo": "PART-PSU-600W",
+    "stock": 4,
+    "precio": 65.0
+  },
+  "SSD 1TB": {
+    "codigo": "PART-SSD-1TB",
+    "stock": 3,
+    "precio": 110.0
+  },
+  "SSD 500GB": {
+    "codigo": "PART-SSD-500G",
+    "stock": 12,
+    "precio": 60.0
+  },
+  "Teclado Tablet": {
+    "codigo": "PART-TAB-KB-01",
+    "stock": 2,
+    "precio": 40.0
+  },
+  "Pasta Térmica": {
+    "codigo": "PART-THERM-PASTE",
+    "stock": 19,
+    "precio": 10.0
+  },
+  "Ventilador CPU": {
+    "codigo": "PART-CPU-FAN",
+    "stock": 4,
+    "precio": 25.0
+  }
+}
