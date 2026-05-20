@@ -1,3 +1,5 @@
+Deploy whit Ngrok: https://striped-bertha-deontic.ngrok-free.dev
+
 # TechServ — Sistema Multiagente de Servicio Técnico, Ventas y Soporte
 
 Este proyecto implementa un sistema multiagente inteligente y autónomo diseñado para gestionar el flujo completo de una tienda de servicio técnico, venta de accesorios y soporte informático. La arquitectura está construida utilizando un motor de coordinación de eventos y un estado compartido de acuerdo con los lineamientos técnicos definidos.
