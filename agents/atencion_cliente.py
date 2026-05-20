@@ -77,6 +77,10 @@ class CustomerServiceAgent(SubAgent):
             historial.append({"sender": "cliente", "message": cliente_input})
             historial.append({"sender": self.name, "message": output_payload["respuesta_cliente"]})
             shared_memory.set("historial_conversacion", historial, self.name)
+            
+            # Publish event for visual tracking on event bus
+            event_bus.publish("ticket.creado", ticket_id, self.name, output_payload)
+            
             return output_payload
 
         # Defaults for safe fallback if not ambiguous but fields are missing

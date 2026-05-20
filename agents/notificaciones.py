@@ -34,12 +34,14 @@ class NotificationsAgent(SubAgent):
 
         # Draft message based on event
         if evento == "ticket.creado":
-            equipo = shared_memory.get("equipo") or {}
-            desc = equipo.get("descripcion", "su equipo")
-            message_text = (
-                f"Hola {nombre}. Hemos registrado tu solicitud técnica para '{desc}'. "
-                f"Tu Ticket ID es {ticket_id}. Te informaremos apenas tengamos el diagnóstico."
-            )
+            message_text = payload.get("mensaje_cliente", "")
+            if not message_text:
+                equipo = shared_memory.get("equipo") or {}
+                desc = equipo.get("descripcion", "su equipo")
+                message_text = (
+                    f"Hola {nombre}. Hemos registrado tu solicitud técnica para '{desc}'. "
+                    f"Tu Ticket ID es {ticket_id}. Te informaremos apenas tengamos el diagnóstico."
+                )
         elif evento == "diagnostico.completado":
             diag = shared_memory.get("diagnostico") or {}
             costo = diag.get("costo_estimado", 0.0)
@@ -94,7 +96,13 @@ class NotificationsAgent(SubAgent):
         })
         shared_memory.set("historial_conversacion", historial, self.name)
         
-        # Publish event
+        # Publish event for dashboard visual tracking
+        event_bus.publish("cliente.notificado", ticket_id, self.name, {
+            "canal": canal,
+            "destinatario": contacto,
+            "mensaje_cliente": message_text
+        })
+        
         # To avoid infinite recursion, we just return the result
         return {
             "ticket_id": ticket_id,

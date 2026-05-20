@@ -66,7 +66,10 @@ class Orchestrator(OrchestratorAgent):
                 print(f"\033[93m[Orquestador] Solicitud ambigua detectada. Solicitando aclaración al cliente.\033[0m")
                 self.log_telemetry(start_t, initial_input, str(c_res))
                 # Execute notification
-                subagents["notificaciones"].process(shared_memory, event_bus, {"evento": "ticket.creado"})
+                subagents["notificaciones"].process(shared_memory, event_bus, {
+                    "evento": "ticket.creado",
+                    "mensaje_cliente": c_res.get("respuesta_cliente")
+                })
                 return False # Needs interactive turn
 
             # Extract classified details

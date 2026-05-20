@@ -1,46 +1,41 @@
 {
-  "Pantalla HP Laptop": {
-    "codigo": "PART-HP-SCR-01",
-    "stock": 4,
+  "PART-SCREEN-HP": {
+    "nombre": "Pantalla HP Laptop 15",
+    "stock": 5,
     "precio": 120.0
   },
-  "Memoria RAM DDR4 8GB": {
-    "codigo": "PART-RAM-DDR4-8G",
+  "PART-RAM-8G": {
+    "nombre": "Memoria RAM DDR4 8GB",
     "stock": 0,
     "precio": 45.0
   },
-  "Memoria RAM DDR4 16GB": {
-    "codigo": "PART-RAM-DDR4-16G",
-    "stock": 4,
+  "PART-RAM-16G": {
+    "nombre": "Memoria RAM DDR4 16GB",
+    "stock": 3,
     "precio": 80.0
   },
-  "Fuente de Poder 600W": {
-    "codigo": "PART-PSU-600W",
-    "stock": 4,
+  "PART-PSU-600": {
+    "nombre": "Fuente de Poder 600W",
+    "stock": 2,
     "precio": 65.0
   },
-  "SSD 1TB": {
-    "codigo": "PART-SSD-1TB",
-    "stock": 3,
+  "PART-SSD-1TB": {
+    "nombre": "SSD 1TB",
+    "stock": 5,
     "precio": 110.0
   },
-  "SSD 500GB": {
-    "codigo": "PART-SSD-500G",
-    "stock": 12,
+  "PART-SSD-500": {
+    "nombre": "SSD 500GB",
+    "stock": 10,
     "precio": 60.0
   },
-  "Teclado Tablet": {
-    "codigo": "PART-TAB-KB-01",
-    "stock": 2,
-    "precio": 40.0
-  },
-  "Pasta Térmica": {
-    "codigo": "PART-THERM-PASTE",
-    "stock": 19,
+  "PART-THERMAL-PASTE": {
+    "nombre": "Pasta Térmica",
+    "stock": 15,
     "precio": 10.0
   },
-  "Ventilador CPU": {
-    "codigo": "PART-CPU-FAN",
+  "PART-FAN-CPU": {
+    "nombre": "Ventilador CPU",
     "stock": 4,
     "precio": 25.0
   }

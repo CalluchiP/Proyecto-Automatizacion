@@ -164,7 +164,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
             # Subscribe to all events
             for ev in ["ticket.creado", "diagnostico.completado", "presupuesto.generado", 
                        "inventario.verificado", "reparacion.iniciada", "reparacion.completada", 
-                       "calidad.aprobada", "venta.procesada", "ticket.error"]:
+                       "calidad.aprobada", "venta.procesada", "ticket.error", "cliente.notificado"]:
                 event_bus.subscribe(ev, event_listener)
 
             # Reset and register Telemetry metrics
